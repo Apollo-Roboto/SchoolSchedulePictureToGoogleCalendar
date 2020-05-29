@@ -17,11 +17,12 @@ namespace CalendrierScholaireToGoogle
         static uint numOfDay = 5;
         static int lineWidth = 2;
 
-        static string xmlFilePath = @"C:\Users\Alex\source\repos\CalendrierScholaireToGoogle\Calendrier_Scholaire_To_Google\SchoolClasses.xml";
+        static string xmlFilePath = "SchoolClasses.xml";
         static SchoolClassesXmlReader dataFile;
 
         static Dictionary<int, string> timeByPixel;
-        static string[] monthsArr = { "janv", "févr", "mars", "avr", "mai", "juin", "juil", "août", "sept", "oct", "nov", "déc" };
+        // months Array to figure out what month we are looking at, regex is used here because Tesseract mess with letters a lot
+        static string[] monthsArr = { "janv", "f[eé]vr", "mars", "avr", "ma[li]", "juin", "jui[li]", "ao[ûu]t", "sept", "oct", "nov", "d[ée]c" };
 
         static SchoolScheduleLoader()
         {
@@ -120,7 +121,8 @@ namespace CalendrierScholaireToGoogle
                 for(int j = 0; j < monthsArr.Length; j++)
                 {
                     string month = monthsArr[j].ToLower();
-                    if (dateOCR.ToLower().Contains(month))
+                    Regex regex = new Regex(month);
+                    if (regex.Match(dateOCR.ToLower()).Success)
                     {
                         monthNum = j;
                         break;

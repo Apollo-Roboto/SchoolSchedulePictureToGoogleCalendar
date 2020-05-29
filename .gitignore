@@ -341,3 +341,6 @@ healthchecksdb
 
 # google credentials
 credentials.json
+
+# google access token
+token.pickle

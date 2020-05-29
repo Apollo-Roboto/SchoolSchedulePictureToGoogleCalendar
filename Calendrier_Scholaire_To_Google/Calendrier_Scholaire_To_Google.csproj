@@ -61,7 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="OutedEvent.json" />
     <None Include="packages.config" />
     <None Include="tessdata\eng.traineddata">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -81,7 +80,6 @@
     <Content Include="ScheduleImages\HoraireSemaine7.ashx.jfif" />
     <Content Include="ScheduleImages\HoraireSemaine8.ashx.jfif" />
     <Content Include="ScheduleImages\HoraireSemaine9.ashx.jfif" />
-    <Content Include="SchoolClasses.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Tesseract.3.3.0\build\Tesseract.targets" Condition="Exists('..\packages\Tesseract.3.3.0\build\Tesseract.targets')" />
