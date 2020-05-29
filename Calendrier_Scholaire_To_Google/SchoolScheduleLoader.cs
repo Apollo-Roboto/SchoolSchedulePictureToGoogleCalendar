@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using Tesseract;
 
 namespace CalendrierScholaireToGoogle
@@ -51,15 +52,47 @@ namespace CalendrierScholaireToGoogle
         }
 
 
+        
+        public static SchoolSchedule[] Load(DirectoryInfo directory)
+        {
+            // --- O P T I M I S A T I O N ---
 
-        public static SchoolSchedule Load(string path)
+            List<SchoolSchedule> schoolSchedules = new List<SchoolSchedule>();
+            List<Thread> threads = new List<Thread>();
+
+            // for each file in this directory, start a thread that will load it
+            foreach (FileInfo file in directory.GetFiles())
+            {
+                ThreadStart threadStart = new ThreadStart(() =>
+                {
+                    schoolSchedules.Add(Load(file));
+                });
+                
+                Thread thread = new Thread(threadStart);
+
+                threads.Add(thread);
+                thread.Start();
+            }
+
+            // wait for all thread to finish
+            foreach (Thread thread in threads)
+            {
+                thread.Join();
+            }
+
+            return schoolSchedules.ToArray();
+        }
+
+
+
+        public static SchoolSchedule Load(FileInfo file)
         {
             Bitmap img;
             SchoolSchedule sc = new SchoolSchedule();
 
             try
             {
-                img = new Bitmap(path);
+                img = new Bitmap(file.FullName);
             }catch(FileNotFoundException)
             {
                 return null;

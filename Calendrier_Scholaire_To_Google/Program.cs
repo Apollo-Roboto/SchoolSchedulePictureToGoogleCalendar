@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Calendrier_Scholaire_To_Google
@@ -16,35 +17,16 @@ namespace Calendrier_Scholaire_To_Google
 
         static void Main(string[] args)
         {
+
             string outedEventFileName = "OutedEvent.json";
             
             string scheduleDirectoryPath = "ScheduleImages";
             DirectoryInfo dir = new DirectoryInfo(scheduleDirectoryPath);
-            FileInfo[] files = dir.GetFiles();
 
-            List<Dictionary<string, object>> schoolEvents = new List<Dictionary<string, object>>();
+            SchoolSchedule[] schoolSchedules = SchoolScheduleLoader.Load(dir);
+            saveToJson(outedEventFileName, schoolSchedules);
 
-            // for each file in the picture direcory
-            foreach(FileInfo file in files)
-            {
-                SchoolSchedule sc = SchoolScheduleLoader.Load(file.FullName);
-                if (sc != null)
-                {
-                    for (int i = 0; i < sc.Count; i++)
-                    {
-                        SchoolGoogleEvent schoolEvent = sc[i];
-
-                        // add event to the list
-                        schoolEvents.Add(schoolEvent.toGoogle());
-
-                    }
-                }
-            }
-
-            // save all the loaded events into a json file
-            saveToJson(outedEventFileName, schoolEvents);
-
-            Console.Write($"This will add {schoolEvents.Count} event to your calendar.\nContinue?[Y/N]: ");
+            Console.Write($"This will add multiple events to your calendar.\nContinue?[Y/N]: ");
             if (Console.ReadLine().ToUpper().Equals("Y"))
             {
                 int result = sendToGoogle(outedEventFileName);
@@ -83,13 +65,23 @@ namespace Calendrier_Scholaire_To_Google
             process.WaitForExit();
             return process.ExitCode;
         }
-        
-        static void saveToJson(string fileName, List<Dictionary<string, object>> list)
-        {
-            // load the event into a json file
-            string json = JsonConvert.SerializeObject(list);
 
-            // delete old file
+        static void saveToJson(string fileName, SchoolSchedule[] schoolSchedules)
+        {
+            List<Dictionary<string, object>> schoolEvents = new List<Dictionary<string, object>>();
+
+            foreach (SchoolSchedule sc in schoolSchedules)
+            {
+                for (int i = 0; i < sc.Count; i++)
+                {
+                    schoolEvents.Add(sc[i].toGoogle());
+                }
+            }
+
+            // load the event into a json file
+            string json = JsonConvert.SerializeObject(schoolEvents);
+
+            // delete old file if exist
             if (File.Exists(fileName))
             {
                 File.Delete(fileName);
@@ -100,5 +92,6 @@ namespace Calendrier_Scholaire_To_Google
             tw.Write(json);
             tw.Close();
         }
+
     }
 }
