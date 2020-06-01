@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using System.Xml;
 
-namespace Calendrier_Scholaire_To_Google
+namespace SchoolScheduleLibrary
 {
     class SchoolClassesXmlReader
     {

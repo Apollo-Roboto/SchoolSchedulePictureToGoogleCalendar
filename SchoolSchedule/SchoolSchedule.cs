@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CalendrierScholaireToGoogle
+namespace SchoolScheduleLibrary
 {
     class SchoolSchedule
     {

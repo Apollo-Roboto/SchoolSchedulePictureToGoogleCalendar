@@ -1,4 +1,4 @@
-﻿using Calendrier_Scholaire_To_Google;
+﻿using SchoolScheduleLibrary;
 using System;
 using System.Collections.Generic;
 using System.IO;

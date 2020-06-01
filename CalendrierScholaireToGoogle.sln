@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendrier_Scholaire_To_Goo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolSchedule", "SchoolSchedule\SchoolSchedule.csproj", "{17DD9A33-A06A-455D-8608-723AF68F426D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolScheduleToGoogleGUI", "SchoolScheduleToGoogleGUI\SchoolScheduleToGoogleGUI.csproj", "{3668A3AA-DF11-4E26-B8E5-455FDA0D960D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolScheduleToGoogleGUI", "SchoolScheduleToGoogleGUI\SchoolScheduleToGoogleGUI.csproj", "{7ED011AE-E05C-44CC-B360-D6FA1C3F6973}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{17DD9A33-A06A-455D-8608-723AF68F426D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17DD9A33-A06A-455D-8608-723AF68F426D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17DD9A33-A06A-455D-8608-723AF68F426D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3668A3AA-DF11-4E26-B8E5-455FDA0D960D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3668A3AA-DF11-4E26-B8E5-455FDA0D960D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3668A3AA-DF11-4E26-B8E5-455FDA0D960D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3668A3AA-DF11-4E26-B8E5-455FDA0D960D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED011AE-E05C-44CC-B360-D6FA1C3F6973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED011AE-E05C-44CC-B360-D6FA1C3F6973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED011AE-E05C-44CC-B360-D6FA1C3F6973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED011AE-E05C-44CC-B360-D6FA1C3F6973}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
