@@ -2,7 +2,7 @@
 
 namespace SchoolScheduleLibrary
 {
-    class SchoolSchedule
+    public class SchoolSchedule
     {
         private List<SchoolGoogleEvent> schoolGoogleEvents = new List<SchoolGoogleEvent>();
 

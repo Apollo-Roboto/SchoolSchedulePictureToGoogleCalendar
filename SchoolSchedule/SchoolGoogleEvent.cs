@@ -2,7 +2,7 @@
 
 namespace SchoolScheduleLibrary
 {
-    class SchoolGoogleEvent
+    public class SchoolGoogleEvent
     {
         private string summary = "";
         private string fullSummary = "";

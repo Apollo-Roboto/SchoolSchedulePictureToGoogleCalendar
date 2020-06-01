@@ -7,9 +7,9 @@ using System.Threading;
 using System.Drawing;
 using Tesseract;
 
-namespace CalendrierScholaireToGoogle
+namespace SchoolScheduleLibrary
 {
-    static class SchoolScheduleLoader
+    public static class SchoolScheduleLoader
     {
 
         static uint numOfDay = 5;

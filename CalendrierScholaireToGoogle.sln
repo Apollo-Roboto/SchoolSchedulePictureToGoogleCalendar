@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendrier_Scholaire_To_Google", "Calendrier_Scholaire_To_Google\Calendrier_Scholaire_To_Google.csproj", "{E1A58FD6-CDE9-41BB-9F99-BE6988A26A0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolSchedule", "SchoolSchedule\SchoolSchedule.csproj", "{17DD9A33-A06A-455D-8608-723AF68F426D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolScheduleLibrary", "SchoolSchedule\SchoolScheduleLibrary.csproj", "{17DD9A33-A06A-455D-8608-723AF68F426D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolScheduleToGoogleGUI", "SchoolScheduleToGoogleGUI\SchoolScheduleToGoogleGUI.csproj", "{7ED011AE-E05C-44CC-B360-D6FA1C3F6973}"
 EndProject
