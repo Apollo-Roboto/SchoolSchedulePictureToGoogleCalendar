@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendrier_Scholaire_To_Google", "Calendrier_Scholaire_To_Google\Calendrier_Scholaire_To_Google.csproj", "{E1A58FD6-CDE9-41BB-9F99-BE6988A26A0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolSchedule", "SchoolSchedule\SchoolSchedule.csproj", "{17DD9A33-A06A-455D-8608-723AF68F426D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolScheduleToGoogleGUI", "SchoolScheduleToGoogleGUI\SchoolScheduleToGoogleGUI.csproj", "{3668A3AA-DF11-4E26-B8E5-455FDA0D960D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{E1A58FD6-CDE9-41BB-9F99-BE6988A26A0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1A58FD6-CDE9-41BB-9F99-BE6988A26A0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1A58FD6-CDE9-41BB-9F99-BE6988A26A0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17DD9A33-A06A-455D-8608-723AF68F426D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17DD9A33-A06A-455D-8608-723AF68F426D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17DD9A33-A06A-455D-8608-723AF68F426D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17DD9A33-A06A-455D-8608-723AF68F426D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3668A3AA-DF11-4E26-B8E5-455FDA0D960D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3668A3AA-DF11-4E26-B8E5-455FDA0D960D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3668A3AA-DF11-4E26-B8E5-455FDA0D960D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3668A3AA-DF11-4E26-B8E5-455FDA0D960D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

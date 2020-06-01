@@ -51,9 +51,7 @@ namespace CalendrierScholaireToGoogle
             }
         }
 
-
-        
-        public static SchoolSchedule[] Load(DirectoryInfo directory)
+        public static SchoolSchedule[] Load(FileInfo[] files)
         {
             // --- O P T I M I S A T I O N ---
 
@@ -61,13 +59,13 @@ namespace CalendrierScholaireToGoogle
             List<Thread> threads = new List<Thread>();
 
             // for each file in this directory, start a thread that will load it
-            foreach (FileInfo file in directory.GetFiles())
+            foreach (FileInfo file in files)
             {
                 ThreadStart threadStart = new ThreadStart(() =>
                 {
                     schoolSchedules.Add(Load(file));
                 });
-                
+
                 Thread thread = new Thread(threadStart);
 
                 threads.Add(thread);
@@ -82,6 +80,10 @@ namespace CalendrierScholaireToGoogle
 
             return schoolSchedules.ToArray();
         }
+
+
+
+        
 
 
 

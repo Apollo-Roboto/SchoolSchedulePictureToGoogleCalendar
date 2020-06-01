@@ -23,7 +23,7 @@ namespace Calendrier_Scholaire_To_Google
             string scheduleDirectoryPath = "ScheduleImages";
             DirectoryInfo dir = new DirectoryInfo(scheduleDirectoryPath);
 
-            SchoolSchedule[] schoolSchedules = SchoolScheduleLoader.Load(dir);
+            SchoolSchedule[] schoolSchedules = SchoolScheduleLoader.Load(dir.GetFiles());
             saveToJson(outedEventFileName, schoolSchedules);
 
             Console.Write($"This will add multiple events to your calendar.\nContinue?[Y/N]: ");
