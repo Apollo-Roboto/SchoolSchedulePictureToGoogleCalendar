@@ -1,134 +1,158 @@
 ﻿<!--
 COMMENT UTILISER
-<class 
-  name="Nom complet du cours"
-  friendlyName="Nom rapide du cours"
-  teacher="Proffesseur"
-  code="Code du cours"
-  colorId="OPTIONELLE couleur du cours"
-  location="OPTIONELLE local du cours. Ajouter seulement si le local n'est pas present dans le calendrier"
-  codeMatch="OPTIONELLE Solution lorsque la lecture de l'image echoue"/>
+	<class 
+		name="Nom complet du cours"
+		friendlyName="Nom rapide du cours"
+		teacher="Proffesseur"
+		code="Code du cours"
+		colorId="OPTIONELLE couleur du cours"
+		location="OPTIONELLE local du cours. Ajouter seulement si le local n'est pas present dans le calendrier"
+		codeMatch="OPTIONELLE Solution lorsque la lecture de l'image echoue"/>
 -->
 
 
 <classes>
   
-  <setting
-    year="2020"
-    group="392"
-    timeZone="America/Toronto"
-    defaultColorId="10" />
+	<setting
+		year="2020"
+		group="392"
+		timeZone="America/Toronto"
+		defaultColorId="10" />
 
-  <!--//////////////////////////////////////////////// Etape 1-->
+	<!--//////////////////////////////////////////////// Etape 1-->
 
-  <class
-    name="Mathématiques appliquée à l'informatique"
-    friendlyName="Mathématiques"
-    teacher="Nicolas Bélanger"
-    code="201-043-RO"
-    codeMatch="2[0oO]1[-_—][0oO]43[-_—]R[0oO]" />
+	<class
+		name="Mathématiques appliquée à l'informatique"
+		friendlyName="Mathématiques"
+		teacher="Nicolas Bélanger"
+		code="201-043-RO"
+		codeMatch="2[0oO]1[-_—][0oO]43[-_—]R[0oO]" />
 
-  <class
-    name="Algorithmes et programmation structurée"
-    friendlyName="Algorithmes"
-    teacher="Alain Gravel"
-    code="420-906-RO"
-    codeMatch="42[0oO][-_—]9[0oO]6[-_—]R[0oO]" />
+	<class
+		name="Algorithmes et programmation structurée"
+		friendlyName="Algorithmes"
+		teacher="Alain Gravel"
+		code="420-906-RO"
+		codeMatch="42[0oO][-_—]9[0oO]6[-_—]R[0oO]" />
 
-  <class
-    name="Système d'exploitation"
-    friendlyName="Système d'exploitation"
-    teacher="Ali Kaisserli"
-    code="420-925-RO"
-    codeMatch="42[0oO][-_—]925[-_—]R[0oO]" />
+	<class
+		name="Système d'exploitation"
+		friendlyName="Système d'exploitation"
+		teacher="Ali Kaisserli"
+		code="420-925-RO"
+		codeMatch="42[0oO][-_—]925[-_—]R[0oO]" />
 
-  <!--//////////////////////////////////////////////// Etape 2-->
+	<!--//////////////////////////////////////////////// Etape 2-->
 
-  <class
-    name="Conception et exploitation de bases de données"
-    friendlyName="bases de données"
-    teacher="Hugo Leblanc"
-    code="420-985-RO"
-    codeMatch="42[0oO][-_—]985[-_—]R[0oO]" />
+	<class
+		name="Conception et exploitation de bases de données"
+		friendlyName="bases de données"
+		teacher="Hugo Leblanc"
+		code="420-985-RO"
+		codeMatch="42[0oO][-_—]985[-_—]R[0oO]" />
 
-  <class
-    name="Concepts de la programmation orientée objet"
-    friendlyName="Object"
-    teacher="Toufik Bellal"
-    code="420-935-RO"
-    codeMatch="42[0oO][-_—]935[-_—]R[0oO]" />
+	<class
+		name="Concepts de la programmation orientée objet"
+		friendlyName="Object"
+		teacher="Toufik Bellal"
+		code="420-935-RO"
+		codeMatch="42[0oO][-_—]935[-_—]R[0oO]" />
 
-  <class
-    name="Système d'exploitation 2"
-    friendlyName="Système d'exploitation 2"
-    teacher="Khalid Bouriche"
-    code="420-953-RO"
-    codeMatch="42[0oO][-_—]953[-_—]R[0oO]" />
+	<class
+		name="Système d'exploitation 2"
+		friendlyName="Système d'exploitation 2"
+		teacher="Khalid Bouriche"
+		code="420-953-RO"
+		codeMatch="42[0oO][-_—]953[-_—]R[0oO]" />
 
-  <!--//////////////////////////////////////////////// Etape 3-->
+	<!--//////////////////////////////////////////////// Etape 3-->
 
-  <class
-    name="Concepts de structuration des données informatiques"
-    friendlyName="Structure des données"
-    teacher="Mathieu Lavallée"
-    code="420-977-RO"
-    codeMatch="42[0oO][-_—]977[-_—]R[0oO]" />
+	<class
+		name="Concepts de structuration des données informatiques"
+		friendlyName="Structure des données"
+		teacher="Mathieu Lavallée"
+		code="420-977-RO"
+		codeMatch="42[0oO][-_—]977[-_—]R[0oO]" />
 
-  <class
-    name="Techniques de réalisation d'interfaces utilisateur"
-    friendlyName="Réalisation d'interfaces"
-    teacher="Abderrazak Sahraoui"
-    code="420-994-RO"
-    codeMatch="42[0oO][-_—]994[-_—]R[0oO]" />
+	<class
+		name="Techniques de réalisation d'interfaces utilisateur"
+		friendlyName="Réalisation d'interfaces"
+		teacher="Abderrazak Sahraoui"
+		code="420-994-RO"
+		codeMatch="42[0oO][-_—]994[-_—]R[0oO]" />
 
-  <class
-    name="Approfondissement des bases de données"
-    friendlyName="Bases de données 2"
-    teacher="Ricker Alcindor"
-    code="420-A34-RO"
-    codeMatch="42[0oO][-_—]A34[-_—]R[0oO]" />
+	<class
+		name="Approfondissement des bases de données"
+		friendlyName="Bases de données 2"
+		teacher="Ricker Alcindor"
+		code="420-A34-RO"
+		codeMatch="42[0oO][-_—]A34[-_—]R[0oO]" />
 
-  <class
-    name="Techniques de développement dans un environnement graphique"
-    friendlyName="Développement graphique"
-    teacher="Toufik Bellal"
-    code="420-AZ3-RO"
-    codeMatch="42[0oO][-_—]AZ3[-_—]R[0oO]" />
+	<class
+		name="Techniques de développement dans un environnement graphique"
+		friendlyName="Développement graphique"
+		teacher="Toufik Bellal"
+		code="420-AZ3-RO"
+		codeMatch="42[0oO][-_—]AZ3[-_—]R[0oO]" />
 
-  <!--//////////////////////////////////////////////// Etape 4-->
+	<!--//////////////////////////////////////////////// Etape 4-->
 
-  <class
-    name="Stratégies de recherche d'emploi"
-    friendlyName="Recherche d'emploi"
-    teacher="Roxanne Larouche"
-    code="360-063-RO"
-    codeMatch="36[0oO][-_—][0oO]63[-_—]R[0oO]"
-    location="Zoom" />
+	<class
+		name="Stratégies de recherche d'emploi"
+		friendlyName="Recherche d'emploi"
+		teacher="Roxanne Larouche"
+		code="360-063-RO"
+		codeMatch="36[0oO][-_—][0oO]63[-_—]R[0oO]"
+		location="Zoom" />
 
-  <class
-    name="Techniques de développement de systèmes"
-    friendlyName="Systèmes"
-    teacher="Hugo Leblanc"
-    code="420-965-RO"
-    codeMatch="42[0oO][-_—]965[-_—]R[0oO]"
-    location="Microsoft Teams" />
+	<class
+		name="Techniques de développement de systèmes"
+		friendlyName="Systèmes"
+		teacher="Hugo Leblanc"
+		code="420-965-RO"
+		codeMatch="42[0oO][-_—]965[-_—]R[0oO]"
+		location="Microsoft Teams" />
 
-  <class
-    name="Techniques de développement dans un environnement graphique"
-    friendlyName="Développement graphique 2"
-    teacher="Toufik Bellal"
-    code="420-B05-RO"
-    codeMatch="42[0oO][-_—]B[0oO][5sS][-_—]R[0oO]"
-    location="Microsoft Teams" />
+	<class
+		name="Techniques de développement dans un environnement graphique"
+		friendlyName="Développement graphique 2"
+		teacher="Toufik Bellal"
+		code="420-B05-RO"
+		codeMatch="42[0oO][-_—]B[0oO][5sS][-_—]R[0oO]"
+		location="Microsoft Teams" />
 
-  <class
-    name="Techniques de développement d'applications hypermédias"
-    friendlyName="Hypermédias"
-    teacher="Sylvain Labranche"
-    code="420-B16-RO"
-    codeMatch="42[0oO][-_—]B1[6sS][-_—]R[0oO]"
-    location="Microsoft Teams" />
+	<class
+		name="Techniques de développement d'applications hypermédias"
+		friendlyName="Hypermédias"
+		teacher="Sylvain Labranche"
+		code="420-B16-RO"
+		codeMatch="42[0oO][-_—]B1[6sS][-_—]R[0oO]"
+		location="Microsoft Teams" />
 
-  <!--//////////////////////////////////////////////// Etape 5-->
+	<!--//////////////////////////////////////////////// Etape 5-->
+
+	<class
+		name="Qualité des applications"
+		friendlyName="Qualité applications"
+		teacher="Abdelmoumène Toudeft"
+		code="420-A44-RO"
+		codeMatch="42[0oO][-_—]A44[-_—]R[0oO]"
+		location="Microsoft Teams" />
+
+	<class
+		name="Développement des applications informatiques - Projet"
+		friendlyName="Projet"
+		teacher="Abderrazak Sahraoui"
+		code="420-B34-RO"
+		codeMatch="42[0oO][-_—][B8]34[-_—]R[0oO]"
+		location="Microsoft Teams" />
+
+	<class
+		name="Techniques de développement d'applications hypermédias 2"
+		friendlyName="Hypermédias 2"
+		teacher="Hugo Leblanc"
+		code="420-B35-RO"
+		codeMatch="42[0oO][-_—]B3[5sS][-_—]R[0oO]"
+		location="Microsoft Teams" />
 
 </classes>

@@ -4,7 +4,7 @@ namespace SchoolScheduleLibrary
 {
     public class SchoolSchedule
     {
-        private List<SchoolGoogleEvent> schoolGoogleEvents = new List<SchoolGoogleEvent>();
+        public List<SchoolGoogleEvent> schoolGoogleEvents = new List<SchoolGoogleEvent>();
 
         public int Count { get => schoolGoogleEvents.Count; }
 

@@ -9,7 +9,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SchoolScheduleLibrary
+using SchoolScheduleLibrary;
+
+namespace CalendrierScholaireToGoogle
 {
     class Program
     {
@@ -23,7 +25,9 @@ namespace SchoolScheduleLibrary
             string scheduleDirectoryPath = "ScheduleImages";
             DirectoryInfo dir = new DirectoryInfo(scheduleDirectoryPath);
 
-            SchoolSchedule[] schoolSchedules = SchoolScheduleLoader.Load(dir.GetFiles());
+            SchoolScheduleLoader loader = new SchoolScheduleLoader();
+            loader.Load(dir.GetFiles());
+            SchoolSchedule[] schoolSchedules = loader.SchoolSchedules.ToArray();
             saveToJson(outedEventFileName, schoolSchedules);
 
             Console.Write($"This will add multiple events to your calendar.\nContinue?[Y/N]: ");

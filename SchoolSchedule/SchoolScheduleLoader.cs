@@ -9,7 +9,7 @@ using Tesseract;
 
 namespace SchoolScheduleLibrary
 {
-    public static class SchoolScheduleLoader
+    public class SchoolScheduleLoader
     {
 
         static uint numOfDay = 5;
@@ -20,7 +20,7 @@ namespace SchoolScheduleLibrary
 
         static Dictionary<int, string> timeByPixel;
         // months Array to figure out what month we are looking at, regex is used here because Tesseract mess with letters a lot
-        static string[] monthsArr = { "janv", "f[eé]vr", "mars", "avr", "ma[li]", "juin", "jui[li]", "ao[ûu]t", "sept", "oct", "nov", "d[ée]c" };
+        static string[] monthsArr = { "janv", "f[eé]vr", "mars", "avr", "ma[li]", "juin", "jui[li]", "ao.t", "sept", "oct", "nov", "d[ée]c" };
 
         static SchoolScheduleLoader()
         {
@@ -48,11 +48,30 @@ namespace SchoolScheduleLibrary
             }
         }
 
-        public static SchoolSchedule[] Load(FileInfo[] files)
+
+        public List<SchoolSchedule> SchoolSchedules { get; }
+        public List<SchoolGoogleEvent> SchoolGoogleEvents 
+        { 
+            get
+            {
+                List<SchoolGoogleEvent> e = new List<SchoolGoogleEvent>();
+                for(int i = 0; i < SchoolSchedules.Count; i++)
+                {
+                    e.AddRange(SchoolSchedules[i].schoolGoogleEvents);
+                }
+                return e;
+            } 
+        }
+
+        public SchoolScheduleLoader()
+        {
+            SchoolSchedules = new List<SchoolSchedule>();
+        }
+
+        public void Load(FileInfo[] files)
         {
             // --- O P T I M I S A T I O N ---
 
-            List<SchoolSchedule> schoolSchedules = new List<SchoolSchedule>();
             List<Thread> threads = new List<Thread>();
 
             // for each file in this directory, start a thread that will load it
@@ -60,7 +79,7 @@ namespace SchoolScheduleLibrary
             {
                 ThreadStart threadStart = new ThreadStart(() =>
                 {
-                    schoolSchedules.Add(Load(file));
+                    this.Load(file);
                 });
 
                 Thread thread = new Thread(threadStart);
@@ -75,7 +94,6 @@ namespace SchoolScheduleLibrary
                 thread.Join();
             }
 
-            return schoolSchedules.ToArray();
         }
 
 
@@ -84,7 +102,7 @@ namespace SchoolScheduleLibrary
 
 
 
-        public static SchoolSchedule Load(FileInfo file)
+        public void Load(FileInfo file)
         {
             Bitmap img;
             SchoolSchedule sc = new SchoolSchedule();
@@ -94,11 +112,11 @@ namespace SchoolScheduleLibrary
                 img = new Bitmap(file.FullName);
             }catch(FileNotFoundException)
             {
-                return null;
+                return;
             }
             catch (ArgumentException)
             {
-                return null;
+                return;
             }
 
             
@@ -235,7 +253,7 @@ namespace SchoolScheduleLibrary
 
             }
 
-            return sc;
+            SchoolSchedules.Add(sc);
         }
 
 
