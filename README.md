@@ -1,4 +1,4 @@
-# Calendrier Scholaire To Google
+# School Schedule Picture To Google Calendar
 I made this tool because I wanted a fast way to check my schedule on my phone
 
 ---
